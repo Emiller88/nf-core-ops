@@ -24,7 +24,8 @@ class Organization:
 
         for user in members:
             # Add a user to the newly created team
-            team_membership = github.TeamMembership(
+            # team_membership =
+            github.TeamMembership(
                 f"{team['name']}-{user['name']}",
                 team_id=team_resource,
                 username=user["name"],
@@ -37,7 +38,8 @@ class Organization:
                 continue
 
             # Associate a repository with the team
-            team_repository = github.TeamRepository(
+            # team_repository =
+            github.TeamRepository(
                 f"{team['name']}-{repo['name']}",
                 team_id=team_resource,
                 repository=self._repos[repo["name"]],
